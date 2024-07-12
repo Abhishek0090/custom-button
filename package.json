@@ -1,6 +1,6 @@
 {
   "name": "weird-button-test",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -9,26 +9,19 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.24.8",
+    "@babel/preset-react": "^7.24.7",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.10.0"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "npm run build"
+    "build": "webpack --mode production"
   },
-  "repository": {
-    "type": "git",
-    "url": "your repository URL here"
-  },
-  "keywords": [
-    "react",
-    "component",
-    "library"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "URL to your issue tracker"
-  },
-  "homepage": "URL to your library's homepage or documentation"
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
 }
